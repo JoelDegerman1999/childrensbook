@@ -1,14 +1,30 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <router-view/>  
   </div>
 </template>
 
+<script>
+export default {
+  data(){return {
+    book: Object
+  }},
+  methods: {
+    test(value) {
+      this.book = value
+      console.log(this.book)
+    }
+  }
+}
+</script>
+
 <style lang="scss">
+//Vet att detta inte är ok på större projekt men får fungera här
+* {
+  margin: 0;
+  padding: 0;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
