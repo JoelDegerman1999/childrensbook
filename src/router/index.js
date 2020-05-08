@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Books from '../views/Books.vue'
-import Book from '../views/Book.vue'
+import ViewAllBooks from '../views/ViewAllBooks.vue'
+import ViewBookInformation from '../views/ViewBookInformation.vue'
 
 Vue.use(VueRouter)
 
@@ -9,12 +9,12 @@ Vue.use(VueRouter)
   {
     path: '/',
     name: 'Books',
-    component: Books
+    component: ViewAllBooks
   },
   {
     path: '/book/:id',
-    name: 'Book',
-    component: Book
+    name: 'BookInfo',
+    component: ViewBookInformation
   }
 ]
 

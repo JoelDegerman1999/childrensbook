@@ -1,0 +1,55 @@
+<template>
+  <section class="viewBookSect">
+    <router-link to="/">
+      <div class="back-icon-div">
+        <img src="../assets/keyboard_backspace-24px.svg" alt />
+      </div>
+    </router-link>
+    <BookInfo :book="getBook" />
+  </section>
+</template>
+
+<script>
+import BookInfo from "../components/BookInformation";
+
+export default {
+  name: "Book",
+  components: {
+    BookInfo
+  },
+  computed: {
+    getBook() {
+      return this.$root.getBook(this.$route.params.id);
+    }
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+.viewBookSect {
+  box-sizing: border-box;
+  padding: 3rem;
+  background: rgb(27, 27, 27);
+  height: 100%;
+
+  a {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: gray;
+    .back-icon-div {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 70px;
+      }
+    }
+  }
+}
+</style>
+
+
