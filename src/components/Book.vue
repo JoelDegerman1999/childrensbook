@@ -38,7 +38,7 @@ export default {
 
   .book-info {
     color: #fff;
-    display: flex;
+    display: flex;  
     flex-direction: column;
     margin-bottom: 1rem;
     text-align: left;
@@ -48,4 +48,5 @@ export default {
     }
   }
 }
+
 </style>

@@ -36,4 +36,17 @@ export default {
 .information {
   grid-column: 5/10;
 }
+
+@media screen and (max-width: 800px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .book {
+    grid-column: 1;
+  }
+
+  .information {
+    grid-column: 1;
+  }
+}
 </style>

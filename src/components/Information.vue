@@ -97,4 +97,26 @@ export default {
     }
   }
 }
+
+
+@media screen and (max-width: 800px) {
+ .book-info {
+   margin: 0;
+   p {
+     width: 100%;
+   }
+   .book-info-box {
+     .left {
+       box-sizing: border-box;
+       width: 100%;
+
+     }
+     .right {
+       box-sizing: border-box;
+       width: 100%;
+     }
+   }
+ }
+}
+  
 </style>>

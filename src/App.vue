@@ -34,4 +34,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
 }
+
+
+@media screen and(max-width:800px){
+  #app {
+    height: 100%;
+  }
+}
 </style>

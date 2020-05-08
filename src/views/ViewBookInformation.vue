@@ -50,6 +50,30 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: 800px) {
+  .viewBookSect {
+    padding: 1rem;
+    a {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: gray;
+      margin-bottom: 1rem;
+      .back-icon-div {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 50px;
+        }
+      }
+    }
+  }
+}
 </style>
 
 
