@@ -102,6 +102,11 @@ export default {
 @media screen and (max-width: 800px) {
  .book-info {
    margin: 0;
+
+   h1 {
+     font-size: 2rem;
+     
+   }
    p {
      width: 100%;
    }
