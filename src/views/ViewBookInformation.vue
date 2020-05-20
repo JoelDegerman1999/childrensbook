@@ -5,7 +5,7 @@
         <img src="../assets/keyboard_backspace-24px.svg" alt />
       </div>
     </router-link>
-    <BookInfo :book="getBook" />
+    <BookInfo :book="getBookById()" />
   </section>
 </template>
 
@@ -15,13 +15,15 @@ import BookInfo from "../components/BookInformation";
 export default {
   name: "Book",
   components: {
-    BookInfo
+    BookInfo,
   },
-  computed: {
-    getBook() {
-      return this.$root.getBook(this.$route.params.id);
-    }
-  }
+  methods: {
+    getBookById() {
+      return this.$store.getters.getBookById(
+        Number.parseInt(this.$route.params.id)
+      );
+    },
+  },
 };
 </script>
 
@@ -75,5 +77,3 @@ export default {
   }
 }
 </style>
-
-

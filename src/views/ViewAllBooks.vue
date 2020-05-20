@@ -1,8 +1,12 @@
 <template>
   <div class="wrapper">
     <div class="container">
-      <router-link v-for="book in bookArray" :key="book.id" :to="'/book/'+ book.id">
-        <Book :book="book" class="book"/>
+      <router-link
+        v-for="book in getAllBooks"
+        :key="book.id"
+        :to="'/book/' + book.id"
+      >
+        <Book :book="book" class="book" />
       </router-link>
     </div>
   </div>
@@ -14,13 +18,16 @@ import Book from "../components/Book";
 export default {
   name: "Books",
   components: {
-    Book
+    Book,
   },
   data() {
-    return {
-      bookArray: this.$root.bookArray
-    };
-  }
+    return {};
+  },
+  computed: {
+    getAllBooks() {
+      return this.$store.state.books;
+    },
+  },
 };
 </script>
 
@@ -48,7 +55,7 @@ a {
   grid-auto-rows: 430px;
 }
 
-@media screen and(max-width: 1300px){
+@media screen and(max-width: 1300px) {
   .container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -58,8 +65,7 @@ a {
   }
 }
 
-
-@media screen and(max-width: 700px){
+@media screen and(max-width: 700px) {
   .container {
     grid-template-columns: repeat(1, 1fr);
   }
